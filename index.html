@@ -1,0 +1,270 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Python3</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<!-- To use this open the url of this file with ?print-pdf at the end-->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Python</h1>
+					</section>
+				</section>
+				<section>
+					<h1>reveal.js</h1>
+					<small>Eine Präsentationssoftware auf Basis von html</small>
+					<p>Besuche <a href="https://cutt.ly/py3-p" target="_blank">https://cutt.ly/py3-p</a>, um die Präsentation live mitzuerleben!</p>
+					<aside class="notes">css3, html5, js -> revealjs.com, https://impress.js.org/, kurzer link, alles auf github -> erklärung</aside>
+				</section>
+				<section>
+					<h2>Gliederung:</h2>
+					<ul>
+						<li>Übersicht</li>
+						<li>Geschichte</li>
+						<li>Nutzung</li>
+						<li>Philosophie</li>
+						<li>Syntax</li>
+						<li>Exceptions</li>
+						<li>Module</li>
+						<li>Quellen</li>
+					</ul>
+				</section>
+				<section>
+					<section>
+						<h2>Übersicht</h2>
+						<img data-src="src/img/popularity1.png">
+						<aside class="notes">Python ist eine der bekanntesten Programmiersprachen.
+							Je nach Studie belegt es Platz 1 bis ungefähr 5.</aside>
+					</section>
+					<section>
+						<img data-src="src/img/popularity2.png">
+						<aside class="notes">egal welcher platz: starke steigung</aside>
+					</section>
+					<section>
+							<img data-src="src/img/popularity3.png">
+					</section>
+					<section>
+							<img data-src="src/img/python_logo.png">
+							<aside class="notes">
+							Frage: Woher kommt der Name Python?
+Der Name Python kommt von der Komikergruppe Monky Python und nicht von der Schlange.
+Anspielungen auf Monky Python sind überall in der Dokumentation (da wo versch. Funktionen der Sprache erklärt werden) zu finden.
+Die Schlange hat sich zwar nicht als Namensgeber herausgestellt, ist aber trd Maskottchen.
+Im Logo sind 2 Schlangen zu sehen.
+							</aside>
+					</section>
+					<section>
+						<h2>Open Source</h2>
+						<aside class="notes">Open Source: Quellcode frei verfügbar, je nach Lizenz nutzbar (u.a. auch kommerziell, close-source)</aside>
+					</section>
+					<section>
+						<h4 style="text-decoration: underline;">Unterstützt</h4>
+						<ul>
+							<li>ObjektOrientierung</li>
+							<li>AspektOrientierung</li>
+							<li>funktionale Programmierung</li>
+						</ul>
+						<aside class="notes">ObjektOrientierung: Klassen, Vererbung, Polymorphie -> später
+							AspektOrientierung: Erweiterung der ObjektOrientierung
+							funktionale Programmierung: Funktionen können nicht nur angewendet werden, sondern als Daten genutzt usw...</aside>
+					</section>
+					<section>
+						<ul>
+							<li>interpretiert</li>
+							<li>dynamische Typisierung - Überprüfung von Datentypen zur Laufzeit</li>
+							<pre><code>C: int a = 12;</code></pre>
+							<pre><code>Python: a = 12</code></pre>
+						</ul>
+						<aside class="notes">Interpretiert, nicht kompiliert -> Um ein Programm auszuführen braucht man einen Interpreter (Kompiliert: einmal kompilieren, immer ausführbar)
+							relativ langsam: Interpretiert, speicherverwaltung, dynamisch
+							>>Tafel: bei einer Zuweisung von x=2 und y=2 wert 2 wird angelegt; die variablen x und y haben eine Referenz auf den Wert 2 im speicher.</aside>
+					</section>
+					<section>
+						<img data-src="src/img/efficiency.png">
+						<aside class="notes">Benchmark -> 1 Programm in versch. Sprachen</aside>
+					</section>
+				</section>
+				<section>
+					<h2>Geschichte</h2>
+					<ul>
+						<li>Entwicklungsbeginn: Ende 90er</li>
+						<li>Guido van Rossum (Benevolent Dictator for Life)</li>
+						<li>Lehrsprache fürs CWI - Niederlande</li>
+						<li>Python2: 16. Oktober 2000 - läuft bis Ende 2019</li>
+						<li>Python3: 2. Dezember 2008</li>
+					</ul>
+					<aside class="notes">Geschichte:
+						Entwicklung begann Ende der 90er.
+						Guido van Rossum (Niederländischer Informatik-Professor an der CWI in Amsterdam,
+							Nachfolger der Lehrsprache ABC (auch vom CWI))
+							Benevolent Dictator for Life - Wohlwollender Diktator auf Lebenszeit - führenden Rolle im Projekt
+						Python2: Garbage Collection: Speicherverwaltung: der collector gibt allen unbenutzten Speicher frei
+							große Benutzung
+							python2.7: Entwicklung nach erscheinung von Python3, verbindet beide Sprachen
+						Python3: Redundanz von Funktionen soll vermieden werden: siehe Zen of Python, aufräumen des Codes (stdlib)
+							nicht rückwärts-kompatibel mit py2
+						</aside>
+				</section>
+				<section>
+					<section>
+						<h2>Nutzung</h2>
+						<aside class="notes">sehr große Verbreitung, eine der beliebtesten Sprachen, siehe Statisktik vorher</aside>
+					</section>
+					<section>
+						<ul>
+							<li>schnell einfache Aufgaben erledigen</li>
+							<li>Internet und Webentwicklung</li>
+							<li>Desktop GUI</li>
+							<li>KI</li>
+							<li>Wissenschaftliche Anwendungen</li>
+						</ul>
+						<aside class="notes">1. einfache Syntax
+							2. Frameworks: Flask, Django, requests, urllib, socket
+							3. Tkinter, PyQt, Pygame
+							4. KI: Tensorflow (by google), PyTorch
+							5. Pandas, SciPy, IPython, NumPy
+							</aside>
+					</section>
+					<section>
+						<h3>Große Projekte mit Python</h3>
+						<ul>
+							<li>Google</li>
+							<li>NASA</li>
+							<li>Yahoo!</li>
+							<li>Linux distributionen, z.B. RedHat</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Philosophie</h2>
+					</section>
+					<section>
+						<img data-src="src/img/zen_of_python.png">
+						<aside class="notes">>>Python3
+							import this
+						-> Zen of Python, Tim Peters, 1999, "leitende Prinzipien"</aside>
+					</section>
+					<section>
+							<ul>
+							<li>Einfache Syntax</li>
+							<pre><code>print("Hello World")</code></pre>
+							<li>Sehr gut für Anfänger</li>
+							<li>Übersichtlichkeit durch wenige Schlüsselwörter</li>
+							</ul>
+							<aside class="notes">Sehr gut geeignet für anfänger, stackoverflow, große community, gute dokumentation, einfache Syntax -> später</aside>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Syntax</h2>
+						<aside class="notes">
+							repl.it
+						</aside>
+					</section>
+					<section>Datentypen</section>
+					<section>Ein- und Ausgabe</section>
+					<section>Bedingungen</section>
+					<section>Schleifen</section>
+					<section>Funktionen</section>
+					<section>Klassen</section>
+				</section>
+				<section>
+					<h2>Exceptions</h2>
+					<ul>
+						<li>sehr wichtig in Python</li>
+						<li>Werden bei allen Problemen aufgerufen</li>
+						<li>Können abgefangen werden</li>
+						<li>Es können eigene erstellt werden</li>
+					</ul>
+				</section>
+				<section>
+					<section>
+						<h2>Module</h2>
+						<ul>
+						<li>können importiert werden</li>
+						<li>enthalten verschiedene Funktionen</li>
+						<li>Beispiel:</li>
+						</ul>
+						<pre><code>import datetime #importiert das Modul datetime
+print(datetime.datetime.now()) #ruft von der Klasse datetime
+#aus dem Modul datetime die Funktion now auf</code></pre>
+					</section>
+					<section>
+						<ul>
+							<li>Einbindung von Modulen aus anderen Sprachen auch möglich</li>
+							<li>z.B. aus C oder C++</li>
+							<li>meistens Performance-Gründe</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<h2>Quellen</h2>
+							<small>https://en.wikipedia.org/wiki/Python_(programming_language)</small>
+							<small>https://pypl.github.io/PYPL.html</small>
+							<small>https://insights.stackoverflow.com/survey/2018/</small>
+							<small>https://www.tiobe.com/tiobe-index/programming-languages-definition/</small>
+							<small>https://insights.stackoverflow.com/survey/2019/</small>
+							<small>https://de.wikipedia.org/wiki/Python_(Programmiersprache)</small>
+							<small>https://de.wikipedia.org/wiki/Benevolent_Dictator_for_Life</small>
+							<small>https://de.wikipedia.org/wiki/Objektorientierte_Programmierung</small>
+							<small>https://de.wikipedia.org/wiki/Aspektorientierte_Programmierung</small>
+							<small>https://de.wikipedia.org/wiki/Funktionale_Programmierung</small>
+							<small>https://de.wikipedia.org/wiki/Dynamische_Typisierung</small>
+							<small>https://de.wikipedia.org/wiki/Interpreter</small>
+							<small>https://de.wikipedia.org/wiki/Dynamische_Programmiersprache</small>
+							<small>https://jaxenter.com/energy-efficient-programming-languages-137264.html</small>
+							<small>https://www.digitalocean.com/community/tutorials/python-2-vs-python-3-practical-considerations-2</small>
+							<small>https://docs.python.org/3/library/datatypes.html</small>
+							<small>https://www.programiz.com/python-programming/variables-datatypes</small>
+							<small>https://www.javatpoint.com/python-data-types</small>
+							<small>https://www.youtube.com/watch?v=1FMCzUPaHzQ&list=PLNmsVeXQZj7q0ao69AIogD94oBgp3E9Zs&index=26</small>
+							<small>https://www.tutorialspoint.com/python/assertions_in_python.htm</small>
+							<small>https://www.quora.com/What-is-Python-mainly-used-for-in-the-real-world-today-Is-it-beneficial-to-use-Python-for-desktop-apps</small>
+				</section>
+				<section>
+					<h2>Eigenarbeit</h2>
+					<p>
+						auf <a href="https://gjhjhsd.github.io/py3/" target="_blank">https://gjhjhsd.github.io/py3/</a> könnt ihr weitere Links finden.
+					</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
